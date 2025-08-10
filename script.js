@@ -1,9 +1,9 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Initially disable buttons
     toggleButtons(false);
 
     // Add event listener to enable buttons when input is detected
-    document.getElementById('jsonInput').addEventListener('input', function() {
+    document.getElementById('jsonInput').addEventListener('input', function () {
         const inputContent = this.value.trim();
         if (inputContent) {
             toggleButtons(true);
@@ -85,7 +85,7 @@ function showNotification(message, color = "#00ff00") {
 }
 
 // Function to copy JSON output to clipboard when clicked
-document.getElementById('jsonOutput').addEventListener('click', function() {
+document.getElementById('jsonOutput').addEventListener('click', function () {
     const isValid = document.getElementById('jsonOutput').getAttribute('data-valid') === 'true';
     const jsonToCopy = document.getElementById('jsonOutput').getAttribute('data-json');
     if (isValid && jsonToCopy) {
